@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy One Month, Lubimiy! 💖</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to left, #ff8abd, #fd56a9);
+            color: hsl(0, 0%, 100%);
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.19);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s;
+        }
+        .slideshow img {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            margin: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .reasons {
+            background: rgba(255, 213, 236, 0.284);
+            padding: 15px;
+            border-radius: 15px;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .countdown {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .heart {
+            font-size: 80px;
+            animation: heartbeat 2s infinite;
+            color: #ff00ae; /* Changed to red */
+        }
+        .secret-letter {
+            display: none;
+            background: rgba(131, 21, 67, 0.454);
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 25px;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .button {
+            background-color: #ffb8d8da;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff2b79;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy One Month, Lubimiy! ❤️</h1>
+    <div class="container">
+        <p class="heart">❤️</p>
+        <p>From the moment we started dating, you’ve made my life better. Every second with you is my favorite. I love you endlessly 💕</p>
+    </div>
+    
+    <div class="slideshow">
+        <img src="Downloads/WhatsApp Video 2025-03-24 at 12.40.59.mp4" alt="Us">
+        <img src="Downloads/WhatsApp Image 2025-03-24 at 00.18.41.jpeg" alt="Our special moment">
+        <img src="Downloads/WhatsApp Video 2025-03-24 at 12.31.03.mp4" alt="Love">
+    </div>
+    
+    <h2>5 Reasons Why I Love You</h2>
+    <div class="reasons">
+        <ul>
+            <li>Your smile has a way of making my day instantly better. I love seeing it💓</li>
+            <li>The way you pay attention to the little things.</li>
+            <li>Every conversation with you feels like home.</li>
+            <li>I love how patient you can be with me, even when it's really hard.</li>
+            <li>The surprises you plan! Always brightens my day and makes me feel special. 💖</li>
+        </ul>
+    </div>
+    
+    <h2>Countdown Until We Meet Again</h2>
+    <p class="countdown" id="countdown"></p>
+    
+    <button class="button" onclick="toggleLetter()">Click to Reveal a Secret Love Letter! 💌</button>
+    <div class="secret-letter" id="secretLetter">
+        <p>My Dearest Love,<br><br> Happy one month to us! It feels like time has flown by, yet at the same time, I can’t imagine my life without you anymore. You’ve become such an important part of my days, my thoughts, and my heart. I love you more than I can put into words. You are so incredibly special to me, in ways I never even knew were possible before you. I love the way your mind works, the way you care, the way you listen, the way you make me feel so safe and loved—I can’t even put into words how much I adore you.
+            I love how smart you are, how you can make me laugh, how you always know how to cheer me up without even trying, how you make things feel so much lighter even when they feel like the toughest. I love the way you look at me, the way you hold me, the way you make me feel like the luckiest person in the world. You are special in every possible way, and I hope you always know that I appreciate you so much, for the little things, the big things, and everything in between.
+            
+            I love you more than I can ever explain, and I always will. One month down, and I already know I want so many more with you. I love you, endlessly and completely.❤️<br><br>Forever yours,<br>Your Love 💕</p>
+    </div>
+    
+    <audio controls autoplay loop>
+        <source src="George Michael (Джордж Майкл) - Careless Whisper.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        function countdown() {
+            const targetDate = new Date('2025-04-11T00:00:00'); // Update with your next meeting date
+            const now = new Date();
+            const diff = targetDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById('countdown').innerText = `${days} days left until I see you! 💕`;
+        }
+        function toggleLetter() {
+            const letter = document.getElementById('secretLetter');
+            letter.style.display = letter.style.display === 'block' ? 'none' : 'block';
+        }
+        countdown();
+    </script>
+</body>
+</html>
